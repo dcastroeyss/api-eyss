@@ -6180,3 +6180,650 @@ Processing by ReservationsController#index as */*
 Completed 200 OK in 18ms (Views: 1.3ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:18:25 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.7ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 183ms (Views: 1.8ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:29:56 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 26ms (Views: 1.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:30:20 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.8ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 29ms (Views: 3.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:31:39 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 21ms (Views: 1.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:32:13 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 23ms (Views: 1.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/rooms?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:33:05 -0400
+Processing by RoomsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:13
+  [1m[36mTypeRoom Load (0.7ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:13
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/reservations/8?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:33:05 -0400
+Processing by ReservationsController#show as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea", "id"=>"8"}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:47
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+  [1m[36mTypeRoom Load (1.1ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+Completed 200 OK in 19ms (Views: 0.8ms | ActiveRecord: 4.7ms)
+
+
+Started PUT "/reservations/8" for 127.0.0.1 at 2018-07-23 12:33:08 -0400
+Processing by ReservationsController#update as */*
+  Parameters: {"room_id"=>"1", "date_begin"=>"2018-07-11", "date_end"=>"2018-07-12", "token"=>"09877be1-5287-458a-9616-ff0881de5cea", "user_id"=>"1", "id"=>"8"}
+HTTP Origin header (http://localhost) didn't match request.base_url (http://localhost:3000)
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:47
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:21
+Unpermitted parameters: :token, :id
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/reservations_controller.rb:22
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:22
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/reservations_controller.rb:22
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:22
+Completed 200 OK in 20ms (Views: 1.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/reservations/4?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:33:08 -0400
+Processing by ReservationsController#show as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea", "id"=>"4"}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:47
+Filter chain halted as :verify_reservation rendered or redirected
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:33:35 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 32ms (Views: 2.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:35:42 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.3ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 23ms (Views: 1.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:38:24 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 21ms (Views: 1.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:39:15 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.3ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 22ms (Views: 1.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:45:11 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 26ms (Views: 1.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/rooms?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:45:16 -0400
+Processing by RoomsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:13
+  [1m[36mTypeRoom Load (0.7ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:13
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rooms?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:48:13 -0400
+Processing by RoomsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mRoom Load (1.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:13
+  [1m[36mTypeRoom Load (0.9ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:13
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:48:16 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.1ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 26ms (Views: 1.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/rooms?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:48:19 -0400
+Processing by RoomsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:13
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:13
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/reservations/6?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 12:48:19 -0400
+Processing by ReservationsController#show as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea", "id"=>"6"}
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:47
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:17
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:00:44 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 22ms (Views: 1.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:05:51 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 21ms (Views: 1.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:06:02 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (1.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 25ms (Views: 1.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:06:34 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 24ms (Views: 1.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:07:28 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 22ms (Views: 2.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:09:38 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.6ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 21ms (Views: 1.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:10:41 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (0.5ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 21ms (Views: 1.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/reservations?token=09877be1-5287-458a-9616-ff0881de5cea" for 127.0.0.1 at 2018-07-23 13:10:54 -0400
+Processing by ReservationsController#index as */*
+  Parameters: {"token"=>"09877be1-5287-458a-9616-ff0881de5cea"}
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "09877be1-5287-458a-9616-ff0881de5cea"], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:41
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mTypeRoom Load (3.7ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE Room Load (0.0ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+  [1m[36mCACHE TypeRoom Load (0.0ms)[0m  [1m[34mSELECT  "type_rooms".* FROM "type_rooms" WHERE "type_rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:31
+Completed 200 OK in 30ms (Views: 2.8ms | ActiveRecord: 6.8ms)
+
+
