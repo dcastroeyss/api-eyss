@@ -1,0 +1,114 @@
+<--- USUARIOS --->
+  ///Crear usuario:
+    POST => '/users'
+  ---Data: 
+    email:string, password:string
+  ---Respuesta: 
+    #en caso de haber sido creado el usuario 
+      {
+        user: {token,email}
+        errors: [],
+        status: 201,
+        saved: true 
+      }
+    #en caso de no haber sido guardado el usuario
+      {
+        errors: [],
+        status: 201,
+        saved: false 
+      }
+
+  ///Login: 
+    GET '/validate_login'
+  ---Data: 
+    email,password
+  ---Respuesta: 
+    # en caso de que los datos son correctos
+      {
+        token: string,
+        user: true,
+        errors: []
+      }
+    # en case de que los datos sean incorrectos
+      {
+        errors: [],
+        user: false 
+      }
+
+<!--- RESERVACIONES ---> 
+# para todas estas se requiere autenticacion, se debe enviar el parametro "token",
+# en caso de que el token de autenticacion no se envie o sea incorrecto el API respondera un JSON
+# como este {response: 'token invalid'}  
+  ///Crear reservaciones: 
+    POST => '/reservations/'
+  ---Data: 
+    user_id: integer,
+    room_id: integer,
+    date_begin: date 
+    date_end: date,
+    token: ''
+  ---Respuesta:
+    # en caso de que la reservacion se haya guardado 
+      {
+        reservation: {},
+        errors: [],
+        saved: true,
+        status: 201
+      }
+    # en case de que la reservacion no se haya guardado
+      {
+        errors: [],
+        status: 201,
+        saved: false 
+      }
+      
+
+  ///Obtener reservaciones
+    GET => '/reservations/'
+  ---Data: 
+    token: ''
+  ---Respuesta: 
+    {
+      reservations: {},
+      status: 201,
+    }
+
+  # para las acciones [crear,editar,eliminar] en caso de que la reservacion no exista la respuesta sera, un JSON
+  # como este: {status: 201, reservation: 'not_exist}
+  ///Obtener reservacion 
+    GET => '/reservations/:id'
+  ---Data: 
+    token: ''
+  ---Respuesta: 
+    {
+      reservation: {},
+      status: 201
+    }
+
+  ///Editar reservacion
+    PUT => '/reservations/:id'
+  ---Data 
+    token: ''
+  ---Respuesta: 
+    # en caso de que la reservacion haya sido editada
+      {
+        reservation: {},
+        status: 201,
+      }
+
+  ///Eliminar reservacion 
+    DELETE => '/reservataions/:id'
+  ---Data
+    token: ''
+  ---Respuesta: 
+    # en caseo de que la reservacion haya sido eliminada
+      {
+        reservation: null,
+        status: 201,
+      }
+
+<---HABITACIONES--->
+  ///Obtener Habitaciones
+    GET => '/rooms/'
+  ---Data
+    token: '' 

@@ -10,7 +10,7 @@ class RoomsController < ApplicationController
   end 
 
   def index 
-    render json: {room: Room.all, status: 201}
+    render json: {room: Room.all.as_json( include: :type_room ), status: 201}
   end
 
   private 
