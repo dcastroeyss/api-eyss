@@ -1,25 +1,33 @@
 <html>
   <head>
     <title>Reservations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <script src="../globalVariables.js" ></script>
     <script src="../lib/jquery-3.3.1.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="index.js" ></script>
   </head>
 
   <body>
-    <table style="display: none;" >
-     <thead>
-      <tr>
-        <th>Usuario</th>
-        <th>Tipo de Habitacion</th>
-        <th>Desde</th>
-        <th>Hasta</th>
-      </tr>
-     </thead>
+    <div class="container">
+      <div class="alert alert-warning" role="alert">
+        <h1>Hotel Price Reservation</h1>
+      </div>
+        <table class="table table-striped" style="display: none;" >
+         <thead class="thead-dark">
+          <tr>
+            <th>Usuario</th>
+            <th>Tipo de Habitacion</th>
+            <th>Desde</th>
+            <th>Hasta</th>
+            <th colspan="2"></th>
+          </tr>
+         </thead>
 
-      <tbody id="reservations" >
+          <tbody id="reservations" >
 
-      </tbody>
-    </table>
+          </tbody>
+        </table>
+    </div>
   </body>
 </html>
