@@ -17,6 +17,6 @@ class TypeRoomsController < ApplicationController
   private
 
   def params_permit
-    params.permit( :price, :name) 
+    params.permit( :price, :name, :numb) 
   end 
 end
